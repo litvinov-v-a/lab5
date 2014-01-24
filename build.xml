@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="lab5" default="all" >
+  
+  <target name="mkdirs" description="Создаем каталоги">
+    <mkdir dir="bin"/>
+    <mkdir dir="doc"/>
+    <mkdir dir="dist"/>
+
+  </target>
+
+  <target name="compile" description="Компляция проекта" depends="clean,mkdirs">
+    <echo>Компилируем...</echo>
+    <javac destdir="bin" includeantruntime="false">
+      <src path="src"/>
+    </javac>
+  
+  </target>
+
+
+  <target name="all" description="Очистить и построить проект" depends="compile">
+    
+    <echo>Сборка проекта...</echo>
+    
+    <javadoc sourcepath="src" destdir="doc" charset="utf-8" />
+    
+    <jar destfile="dist/lab5.jar" basedir="bin">
+      <manifest>
+	<attribute name="Main-Class" value="ru.litvinov.lab5.lab5"/>
+      </manifest>
+    </jar>
+  
+  </target>
+  <target name="clean" description="Очистка">
+    <echo>Удаление каталогов</echo>
+    <delete dir="bin"/>
+    <delete dir="doc"/>
+    <delete dir="dist"/>
+  </target>
+
+</project>
