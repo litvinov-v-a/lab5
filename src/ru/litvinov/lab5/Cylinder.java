@@ -64,7 +64,7 @@ public class Cylinder extends Body
 	public String toString()
     {
 		String str;
-        str = " ID = " + this.getId() + " - " + this.getName() + " \n";
+        str = this.getTime() + ";" + " ID = " + this.getId() + " - " + this.getName() + " \n";
         str = str + "Радиус = " + this.getR() + "; Высота = " + this.getH() + "; Диаметр = " + this.getD() +"\n";
         str = str + "Площадь: " + this.getArea()  +"\n" ;
         str = str + "Объем: " + this.getV() +  "\n-----------------";

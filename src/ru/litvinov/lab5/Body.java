@@ -6,6 +6,9 @@ package ru.litvinov.lab5;
 *  @author Litvinov V.A. 
 */
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 abstract class Body implements GetV, GetArea
 {	
@@ -43,4 +46,11 @@ abstract class Body implements GetV, GetArea
          sortDown = t;
      }
      
+    public String getTime() 
+    {
+	DateFormat dateFormat = new SimpleDateFormat("dd.MM.YYYY HH:mm:ss");
+	Date date = new Date();
+        return dateFormat.format(date);
+    }
+    
 }

@@ -68,7 +68,7 @@ public class Cube extends Body
 	public String toString()
     {
 		String str;
-        str = " ID = " + this.getId() + " - " + this.getName() + " \n";
+        str =   this.getTime() + ";" + " ID = " + this.getId() + " - " + this.getName() + " \n";
         str = str + "Длина ребра:" + this.getA() + "\n";
         str = str + "Площадь: " + this.getArea()  +"\n" ;
         str = str + "Объем: " + this.getV() +  "\n";
